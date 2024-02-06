@@ -1,0 +1,72 @@
+@media screen and (max-width: 450px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .body {
+        width: 90vw;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5em;
+    }
+
+    .body h1 {
+        padding-top: 2.5em;
+    }
+
+    .body form {
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .formItens {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .formItens p, a {
+        font-family: 'Overlock';
+        color: #fff;
+        text-align: start;
+    }
+
+    .formItens fieldset {
+        border: none;
+    }
+
+    .formItens fieldset input {
+        outline: none;
+        border: none;
+        padding: .5em 1em;
+        width: 20em;
+        border-radius: 1em;
+        font-family: 'Roboto';
+    }
+
+    .formItens>a:hover {
+        color: #efefef;
+    }
+
+    .body form button{
+        padding: 0.8em 1em;
+        width: 22em;
+        border-radius: 20px;
+        background-color: #FEBD00;
+        color: #fff;
+        font-family: 'Roboto';
+        font-weight: bold;
+        transition: .3s;
+    }
+    .body form button:active{
+        transform: scale(1.01);
+    }
+}
