@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+
 import Style from '../Login/Login.module.css'
 
 const Login = () => {
