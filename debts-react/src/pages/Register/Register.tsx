@@ -38,7 +38,7 @@ const Register = () => {
 
     return (
         <div className={Style.body}>
-            <h1><img src="src/assets/logoDebts.png" alt="Logo do site Debts" /></h1>
+            <h1><img src="./src/assets/logoDebts.png" alt="Logo do site Debts" /></h1>
             <form>
                 <div className={Style.formItens}>
                     <fieldset>

@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <div className={Style.body}>
       <h1>
-        <img src="src/assets/logoDebts.png" alt="Logo do site Debts" />
+        <img src="./src/assets/logoDebts.png" alt="Logo do site Debts" />
       </h1>
       <form onSubmit={handleSubmit}> {/* Usando onSubmit para lidar com o envio do formulário */}
         <div className={Style.formItens}>
