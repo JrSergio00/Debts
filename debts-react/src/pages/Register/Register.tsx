@@ -1,5 +1,6 @@
 // import React from 'react'
 import { useState } from 'react'
+import logoDebts from '../../assets/logoDebts.png';
 import Style from '../Register/Register.module.css'
 
 const Register = () => {
@@ -38,7 +39,7 @@ const Register = () => {
 
     return (
         <div className={Style.body}>
-            <h1><img src="./src/assets/logoDebts.png" alt="Logo do site Debts" /></h1>
+            <h1><img src={logoDebts} alt="Logo do site Debts" /></h1>
             <form>
                 <div className={Style.formItens}>
                     <fieldset>

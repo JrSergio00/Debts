@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logoDebts from '../../assets/logoDebts.png';
 
 import Style from '../Login/Login.module.css'
 
@@ -30,7 +31,7 @@ const Login = () => {
   return (
     <div className={Style.body}>
       <h1>
-        <img src="./src/assets/logoDebts.png" alt="Logo do site Debts" />
+        <img src={logoDebts} alt="Logo do site Debts" />
       </h1>
       <form onSubmit={handleSubmit}> {/* Usando onSubmit para lidar com o envio do formulário */}
         <div className={Style.formItens}>
