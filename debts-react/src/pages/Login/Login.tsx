@@ -61,7 +61,7 @@ const Login = () => {
             <p>Sua senha:</p>
 
             <div className={Style.password}>
-              <input type={isPasswordVisible ? 'text' : 'password'} inputMode="tel" value={senha} onChange={MudarSenha} onKeyDown={handleKeyDown} required />
+              <input type={isPasswordVisible ? 'text' : 'password'} autoComplete="off" value={senha} onChange={MudarSenha} onKeyDown={handleKeyDown} required />
 
               <button onClick={togglePasswordVisibility}>
                 <div dangerouslySetInnerHTML={{ __html: eye }} />
