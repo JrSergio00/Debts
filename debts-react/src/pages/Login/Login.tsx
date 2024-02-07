@@ -30,7 +30,7 @@ const Login = () => {
   };
 
 
-  const togglePasswordVisibility = (e) => {
+  const togglePasswordVisibility = (e: any) => {
     e.preventDefault(); // Evita o envio do formulário
 
     if (isPasswordVisible == false) {
