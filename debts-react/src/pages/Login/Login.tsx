@@ -42,7 +42,6 @@ const Login = () => {
     }
   };
 
-
   const togglePasswordVisibility = (e: any) => {
     e.preventDefault(); // Evita o envio do formulário
 

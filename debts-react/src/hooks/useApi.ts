@@ -7,11 +7,17 @@ const api = axios.create({
 
 export const useApi = () => ({
     validateToken: async (token: string) => {
+        return {
+            user: {
+                id: 1,
+                name: "Sérgio",
+                email: "sergiojr9834@gmail.com"
+            }
+        }
         const response = await api.post('/validateToken', { token})
         return response.data
     },
     signin: async (email: string, password: string) => {
-
         return {
             user: {
                 id: 1,
@@ -24,6 +30,7 @@ export const useApi = () => ({
         return response.data
     },
     signout: async () => {
+        return { status: true }
         const response = await api.post('/signout')
         return response.data
     }
