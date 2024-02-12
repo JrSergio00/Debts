@@ -5,13 +5,11 @@ import Login from './pages/Login/Login'
 import HomePage from './pages/HomePage/HomePage'
 import { ReactNode } from 'react';
 import Register from './pages/Register/Register';
+import { RequireAuth } from './contexts/Auth/RequireAuth';
+import Profile from './pages/Profile/Profile';
 
 // Definindo o tipo para o atributo children nos componentes de layout
 interface LoginLayoutProps {
-  children: ReactNode;
-}
-
-interface MainLayoutProps {
   children: ReactNode;
 }
 
@@ -24,49 +22,25 @@ function LoginLayout({ children } : LoginLayoutProps) {
   )
 }
 
-// Criando um componente de layout para as outras páginas
-function MainLayout({ children } : MainLayoutProps) {
-  return (
-    <>
-      <header>
-        <h1>DEBTS</h1>
-        <nav>
-          <a href="/home">Home Page</a>
-          <a href="/">Login</a>
-        </nav>
-      </header>
-      {children}
-    </>
-  )
-}
-
 function App() {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
+      {/* ROTAS PÚBLICAS */}
+      <Route path="/" element={
           <LoginLayout>
             <Login />
           </LoginLayout>
         }
       />
-      <Route
-        path="/register"
-        element={
+      <Route path="/register" element={
           <LoginLayout>
             <Register />
           </LoginLayout>
         }
       />
-      <Route
-        path="/home"
-        element={
-          <MainLayout>
-            <HomePage />
-          </MainLayout>
-        }
-      />
+      {/* ROTAS PRIVADAS */}
+      <Route path="/home" element={ <RequireAuth><HomePage /></RequireAuth> } />
+      <Route path="/profile" element={ <RequireAuth><Profile /></RequireAuth> } />
     </Routes>
   )
 }
