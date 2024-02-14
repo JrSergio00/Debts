@@ -3,7 +3,7 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import HomePage from './pages/HomePage/HomePage'
-import { ReactNode, useContext } from 'react';
+import { ReactNode} from 'react';
 import Register from './pages/Register/Register';
 import { RequireAuth } from './contexts/Auth/RequireAuth';
 import Profile from './pages/Profile/Profile';
